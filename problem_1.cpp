@@ -3,15 +3,10 @@
 using namespace std;
 
 void insertion_sort(int data[], int s) {
-    // kondisi awal:
-    // sublarik urut terdiri dari satu anggota, yaitu elemen indeks ke-0
-    // elemen ke-1, dst adalah anggota dari sublarik tidak urut
     for (int i = 1; i < s; i++) {
         int key = data[i];
         int j = i - 1;
         
-        // Geser elemen yang lebih kecil dari key ke kanan
-        // untuk descending order
         while (j >= 0 && data[j] < key) {
             data[j + 1] = data[j];
             j--;
